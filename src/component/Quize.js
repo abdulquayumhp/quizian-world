@@ -1,9 +1,19 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
+import QuizeAnswers from "./QuizeAnswers";
 
 const Quize = () => {
+	const quiz = useLoaderData();
+	console.log(quiz.data);
+
+	const { questions } = quiz.data;
+	console.log(questions);
+
 	return (
 		<div>
-			<h1>Quize </h1>
+			{questions.map(quarry => (
+				<QuizeAnswers key={quarry.id} quarry={quarry} />
+			))}
 		</div>
 	);
 };
