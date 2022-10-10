@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import About from "./About";
 import Blog from "./Blog";
 import { quizLoadedData } from "./Data";
 import ErrorPage from "./EroorPage";
@@ -38,6 +39,10 @@ export const route = createBrowserRouter([
 			{
 				path: "blog",
 				element: <Blog />,
+			},
+			{
+				path: "about",
+				element: <About />,
 			},
 		],
 	},
