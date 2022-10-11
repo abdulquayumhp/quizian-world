@@ -20,7 +20,7 @@ const Header = () => {
 					<ul
 						className={`gap-4 md:p-0 p-5 md:gap-8 lg:flex-row flex-col flex  mx-auto `}>
 						<NavLink to="/">Home</NavLink>
-						<NavLink to="/quize">Quize</NavLink>
+						<NavLink to="/Topic">Topic</NavLink>
 						<NavLink to="/statistics">Statistics</NavLink>
 						<NavLink to="/blog">Blog</NavLink>
 						<NavLink to="/about">About</NavLink>

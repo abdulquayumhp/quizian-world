@@ -3,8 +3,9 @@ import About from "./About";
 import Blog from "./Blog";
 import { quizLoadedData } from "./Data";
 import ErrorPage from "./EroorPage";
-import Home from "./Home";
+import MainPage from "./MainPage";
 import Quize from "./Quize";
+import QuizeBox from "./QuizeBox";
 import Root from "./Root";
 import Statistics from "./Statistics";
 
@@ -17,12 +18,13 @@ export const route = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: <Home />,
+				element: <MainPage />,
 			},
 			{
-				path: "quize",
-				element: <Quize />,
+				path: "Topic",
+				element: <QuizeBox />,
 			},
+
 			{
 				path: "quize/:id",
 				loader: ({ params }) => {

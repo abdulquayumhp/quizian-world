@@ -4,10 +4,10 @@ import QuizeAnswers from "./QuizeAnswers";
 
 const Quize = () => {
 	const quiz = useLoaderData();
-	console.log(quiz);
+	// console.log(quiz);
 
 	const { questions } = quiz.data;
-	console.log(questions);
+	// console.log(questions);
 
 	return (
 		<div>

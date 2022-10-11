@@ -1,4 +1,4 @@
-import { EyeIcon } from "@heroicons/react/24/solid";
+import { EyeSlashIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -8,7 +8,7 @@ const QuizeAnswers = ({ quarry }) => {
 
 	// console.log(correctAnswer);
 
-	const [ans, setAns] = useState("");
+	const [ans, setAns] = useState(false);
 	// console.log(ans);
 
 	const answer = correctAnswer.replaceAll(" ", "");
@@ -30,13 +30,18 @@ const QuizeAnswers = ({ quarry }) => {
 			<div className="mx-auto  md:w-6/12 bg-amber-300 my-10 p-5 rounded-lg">
 				<div className="flex justify-around">
 					<h1 className="text-xl">{question.slice(3, -4)}</h1>
-					<div>
-						<label htmlFor="my-modal-3">
-							<EyeIcon
-								onClick={() => correctAnswerWithEye(quarry)}
-								className="h-6 w-6 text-blue-500 cursor-pointer"
-							/>
-						</label>
+					<div className=" flex flex-col items-end">
+						<div>
+							<p className="text-2xl text-red-400">{ans}</p>
+						</div>
+						<div>
+							<label className="" htmlFor="my-modal-3">
+								<EyeSlashIcon
+									onClick={() => correctAnswerWithEye(quarry)}
+									className="h-6 w-6 text-blue-500 cursor-pointer"
+								/>
+							</label>
+						</div>
 					</div>
 				</div>
 				<div className="flex flex-wrap md:flex-wrap-reverse justify-center m-5 ">
@@ -57,8 +62,8 @@ const QuizeAnswers = ({ quarry }) => {
 						</div>
 					</div>
 				</div>
-				<p>{ans}</p>
-				<input type="checkbox" id="my-modal-3" className="modal-toggle" />
+
+				{/* <input type="checkbox" id="my-modal-3" className="modal-toggle" />
 				<div className="modal">
 					<div className="modal-box relative">
 						<label
@@ -68,7 +73,7 @@ const QuizeAnswers = ({ quarry }) => {
 						</label>
 						<p className="py-4">{ans}</p>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

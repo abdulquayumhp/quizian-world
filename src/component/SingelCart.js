@@ -1,7 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const SingelCart = ({ quiz, quizStartHandler }) => {
+const SingelCart = ({ quiz }) => {
 	const { id, name, logo } = quiz;
+
+	const navigate = useNavigate();
+	const quizStartHandler = id => {
+		navigate(`/quize/${id}`);
+	};
 	return (
 		<div>
 			<section className="py-6 sm:py-12 dark:bg-gray-800 bg-blue-100 dark:text-gray-100 ">
