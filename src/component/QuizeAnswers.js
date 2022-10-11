@@ -2,14 +2,10 @@ import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-const QuizeAnswers = ({ quarry }) => {
-	// console.log(quarry);
+const QuizeAnswers = ({ quarry, I }) => {
 	const { correctAnswer, options, question } = quarry;
 
-	// console.log(correctAnswer);
-
 	const [ans, setAns] = useState(false);
-	// console.log(ans);
 
 	const answer = correctAnswer.replaceAll(" ", "");
 
@@ -24,11 +20,12 @@ const QuizeAnswers = ({ quarry }) => {
 	const correctAnswerWithEye = id => {
 		setAns(id.correctAnswer);
 	};
-	// console.log(option);
+
 	return (
 		<div>
 			<div className="mx-auto  md:w-6/12 bg-amber-300 my-10 p-5 rounded-lg relative">
 				<div className="flex justify-between ">
+					<p>{I}</p>
 					<h1 className="text-xl">{question.slice(3, -4)}</h1>
 					<div className=" flex flex-col items-end ">
 						<div className="">
@@ -72,18 +69,6 @@ const QuizeAnswers = ({ quarry }) => {
 						</div>
 					</div>
 				</div>
-
-				{/* <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-				<div className="modal">
-					<div className="modal-box relative">
-						<label
-							htmlFor="my-modal-3"
-							className="btn btn-sm btn-circle absolute right-2 top-2">
-							✕
-						</label>
-						<p className="py-4">{ans}</p>
-					</div>
-				</div> */}
 			</div>
 		</div>
 	);

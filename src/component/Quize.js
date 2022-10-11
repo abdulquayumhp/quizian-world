@@ -11,8 +11,8 @@ const Quize = () => {
 
 	return (
 		<div>
-			{questions.map(quarry => (
-				<QuizeAnswers key={quarry.id} quarry={quarry} />
+			{questions.map((quarry, i) => (
+				<QuizeAnswers key={quarry.id} I={i + 1} quarry={quarry} />
 			))}
 		</div>
 	);
