@@ -1,4 +1,4 @@
-import { EyeSlashIcon } from "@heroicons/react/24/solid";
+import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -27,19 +27,29 @@ const QuizeAnswers = ({ quarry }) => {
 	// console.log(option);
 	return (
 		<div>
-			<div className="mx-auto  md:w-6/12 bg-amber-300 my-10 p-5 rounded-lg">
-				<div className="flex justify-around">
+			<div className="mx-auto  md:w-6/12 bg-amber-300 my-10 p-5 rounded-lg relative">
+				<div className="flex justify-between ">
 					<h1 className="text-xl">{question.slice(3, -4)}</h1>
-					<div className=" flex flex-col items-end">
-						<div>
-							<p className="text-2xl text-red-400">{ans}</p>
-						</div>
-						<div>
-							<label className="" htmlFor="my-modal-3">
-								<EyeSlashIcon
-									onClick={() => correctAnswerWithEye(quarry)}
-									className="h-6 w-6 text-blue-500 cursor-pointer"
-								/>
+					<div className=" flex flex-col items-end ">
+						<div className="">
+							<p
+								className={` ${
+									ans ? "absolute right-20 top-2  bg-blue-200 p-5" : "hidden"
+								} `}>
+								{correctAnswer}
+							</p>
+							<label
+								onClick={() => setAns(!ans)}
+								className=""
+								htmlFor="my-modal-3">
+								{ans ? (
+									<EyeIcon className="h-6 w-6 text-blue-500 cursor-pointer" />
+								) : (
+									<EyeSlashIcon
+										onClick={() => correctAnswerWithEye(quarry)}
+										className="h-6 w-6 text-blue-500 cursor-pointer"
+									/>
+								)}
 							</label>
 						</div>
 					</div>
