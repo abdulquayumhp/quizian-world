@@ -1,17 +1,26 @@
 import { EyeIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const QuizeAnswers = ({ quarry }) => {
 	// console.log(quarry);
-	const { id, correctAnswer, options, question } = quarry;
+	const { correctAnswer, options, question } = quarry;
+
+	// console.log(correctAnswer);
 
 	const [ans, setAns] = useState("");
-	console.log(ans);
+	// console.log(ans);
 
-	// const wrightAnswer = () => {
-	// 	console.log(id);
-	// };
+	const answer = correctAnswer.replaceAll(" ", "");
 
+	const quizAnswer = innerText => {
+		const text = innerText.replaceAll(" ", "");
+		if (answer === text) {
+			toast.success("success", { autoClose: 500 });
+		} else {
+			toast.warning("sorry", { autoClose: 500 });
+		}
+	};
 	const correctAnswerWithEye = id => {
 		setAns(id.correctAnswer);
 	};
@@ -20,7 +29,7 @@ const QuizeAnswers = ({ quarry }) => {
 		<div>
 			<div className="mx-auto  md:w-6/12 bg-amber-300 my-10 p-5 rounded-lg">
 				<div className="flex justify-around">
-					<h1 className="text-xl">{question}</h1>
+					<h1 className="text-xl">{question.slice(3, -4)}</h1>
 					<div>
 						<label htmlFor="my-modal-3">
 							<EyeIcon
@@ -33,18 +42,18 @@ const QuizeAnswers = ({ quarry }) => {
 				<div className="flex flex-wrap md:flex-wrap-reverse justify-center m-5 ">
 					<div className="m-5">
 						<div className="bg-blue-100 mb-2 md:w-96 border py-2 px-2 rounded-lg cursor-pointer">
-							<p>{options[0]}</p>
+							<p onClick={e => quizAnswer(e.target.innerText)}>{options[0]}</p>
 						</div>
 						<div className="bg-blue-100 border mb-2 py-2 px-2 rounded-lg cursor-pointer">
-							<p>{options[1]}</p>
+							<p onClick={e => quizAnswer(e.target.innerText)}>{options[1]}</p>
 						</div>
 					</div>
 					<div className="m-5">
 						<div className="bg-blue-100 md:w-96 mb-2 border py-2 px-2 rounded-lg cursor-pointer">
-							<p>{options[2]}</p>
+							<p onClick={e => quizAnswer(e.target.innerText)}>{options[2]}</p>
 						</div>
 						<div className="bg-blue-100 border mb-2 py-2 px-2 rounded-lg cursor-pointer">
-							<p>{options[3]}</p>
+							<p onClick={e => quizAnswer(e.target.innerText)}>{options[3]}</p>
 						</div>
 					</div>
 				</div>
@@ -57,7 +66,6 @@ const QuizeAnswers = ({ quarry }) => {
 							className="btn btn-sm btn-circle absolute right-2 top-2">
 							✕
 						</label>
-						<h3 className="text-lg text-black font-bold">{ans}</h3>
 						<p className="py-4">{ans}</p>
 					</div>
 				</div>
