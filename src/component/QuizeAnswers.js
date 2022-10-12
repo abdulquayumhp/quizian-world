@@ -57,18 +57,18 @@ const QuizeAnswers = ({ quarry, I }) => {
 				</div>
 				<div className="flex flex-wrap md:flex-wrap-reverse justify-center m-5 ">
 					<div className="m-5">
-						<div className="bg-blue-100 mb-2 md:w-96 border py-2 px-2 rounded-lg cursor-pointer">
+						<div className="bg-blue-100 hover:bg-blue-300 mb-2 md:w-96 border py-2 px-2 rounded-lg cursor-pointer ">
 							<p onClick={e => quizAnswer(e.target.innerText)}>{options[0]}</p>
 						</div>
-						<div className="bg-blue-100 border mb-2 py-2 px-2 rounded-lg cursor-pointer">
+						<div className="bg-blue-100 hover:bg-blue-300 borde  mb-2 py-2 px-2 rounded-lg cursor-pointer">
 							<p onClick={e => quizAnswer(e.target.innerText)}>{options[1]}</p>
 						</div>
 					</div>
 					<div className="m-5">
-						<div className="bg-blue-100 md:w-96 mb-2 border py-2 px-2 rounded-lg cursor-pointer">
+						<div className="bg-blue-100 hover:bg-blue-300 md:w-96 mb-2 border py-2 px-2 rounded-lg cursor-pointer">
 							<p onClick={e => quizAnswer(e.target.innerText)}>{options[2]}</p>
 						</div>
-						<div className="bg-blue-100 border mb-2 py-2 px-2 rounded-lg cursor-pointer">
+						<div className="bg-blue-100 hover:bg-blue-300 border mb-2 py-2 px-2 rounded-lg cursor-pointer">
 							<p onClick={e => quizAnswer(e.target.innerText)}>{options[3]}</p>
 						</div>
 					</div>

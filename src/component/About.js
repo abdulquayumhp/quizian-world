@@ -6,7 +6,7 @@ const About = () => {
 			<div
 				className="hero min-h-screen bg-base-200 "
 				style={{
-					backgroundImage: `url("https://blog.hubspot.com/hubfs/google-quiz.jpg")`,
+					backgroundImage: `url("https://dvyvvujm9h0uq.cloudfront.net/com/articles/1572855258-graphicdesignsoftware.jpg")`,
 				}}>
 				<div className="hero-content flex-col lg:flex-row-reverse">
 					<div className="text-center lg:text-left">

@@ -1,6 +1,6 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
@@ -9,8 +9,10 @@ const Header = () => {
 			<div className="bg-blue-100 flex justify-around py-5">
 				<div className="logo">
 					<h1>
-						<span className="font-sans text-4xl">Quizian</span>{" "}
-						<span className="text-blue-600">World</span>
+						<Link to="/">
+							<span className="font-sans text-4xl">Quizian</span>{" "}
+							<span className="text-blue-600">World</span>
+						</Link>
 					</h1>
 				</div>
 				<div
