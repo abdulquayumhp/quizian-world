@@ -5,7 +5,7 @@
 #you can participate in this quizian world quize option
 
 
-#use barious think for build this website
+#use various think for build this website
 
 #css framWork :  tailwind,daisyui
 
