@@ -1,5 +1,11 @@
 #website link : https://quize-with-practice.netlify.app/
 
+#this website is about quiz there have multiple quiz for developer react, css, javscript etc
+
+#you can participate in this quizian world quize option
+
+
+#use barious think for build this website
 
 #css framWork :  tailwind,daisyui
 
