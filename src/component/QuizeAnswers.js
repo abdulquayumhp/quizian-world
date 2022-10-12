@@ -25,13 +25,17 @@ const QuizeAnswers = ({ quarry, I }) => {
 		<div>
 			<div className="mx-auto  md:w-6/12 bg-amber-300 my-10 p-5 rounded-lg relative">
 				<div className="flex justify-between ">
-					<p>{I}</p>
-					<h1 className="text-xl">{question.slice(3, -4)}</h1>
+					<p>
+						<span className="">Quiz No:</span> {I}
+					</p>
+					<h1 className="text-xl">
+						{question.replaceAll("<p>", " ").replaceAll("</p>", " ")}
+					</h1>
 					<div className=" flex flex-col items-end ">
 						<div className="">
 							<p
 								className={` ${
-									ans ? "absolute right-20 top-2  bg-blue-200 p-5" : "hidden"
+									ans ? "absolute right-12 top-2  bg-blue-200 p-5" : "hidden"
 								} `}>
 								{correctAnswer}
 							</p>
