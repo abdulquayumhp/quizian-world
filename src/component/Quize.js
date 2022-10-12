@@ -4,16 +4,21 @@ import QuizeAnswers from "./QuizeAnswers";
 
 const Quize = () => {
 	const quiz = useLoaderData();
-	// console.log(quiz);
 
-	const { questions } = quiz.data;
-	// console.log(questions);
+	const { questions, name } = quiz.data;
 
 	return (
 		<div>
-			{questions.map((quarry, i) => (
-				<QuizeAnswers key={quarry.id} I={i + 1} quarry={quarry} />
-			))}
+			<div>
+				<h1 className="py-5 text-2xl font-semibold">
+					Quiz Category <span className="text-yellow-400">{name}</span>
+				</h1>
+			</div>
+			<div>
+				{questions.map((quarry, i) => (
+					<QuizeAnswers key={quarry.id} name={name} I={i + 1} quarry={quarry} />
+				))}
+			</div>
 		</div>
 	);
 };

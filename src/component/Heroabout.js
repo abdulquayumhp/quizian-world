@@ -3,7 +3,7 @@ import React from "react";
 const Heroabout = () => {
 	return (
 		<div className="bg-blue-100 h-full rounded-lg">
-			<div className="mx-3 md:mx-0 md:w-9/12 md:mx-auto py-10 rounded-lg ">
+			<div className="mx-3  md:w-9/12 md:mx-auto py-10 rounded-lg ">
 				<div className="relative rounded-lg  border-8 z-100">
 					<img
 						src="https://en-media.thebetterindia.com/uploads/2019/12/Final-Banner_TBI-Quiz.png"
@@ -27,9 +27,9 @@ const Heroabout = () => {
 										jumps over a lazy dog
 									</h2>
 									<p className="max-w-xl mb-4 text-base  md:text-lg">
-										Sed ut perspiciatis unde omnis iste natus error sit
-										voluptatem accusantium doloremque laudan, totam rem aperiam,
-										eaque ipsa quae.
+										The phenomenon of online quizzes has been booming for years
+										now. Whether you just like to take them for fun as a stress
+										reliever or want to get a little insight into your
 									</p>
 									<a
 										href="/"
@@ -98,7 +98,7 @@ const Heroabout = () => {
 											<div className="mt-4 mb-2 sm:mb-4">
 												<button
 													type="submit"
-													className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+													className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-yellow-600 transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
 													Subscribe
 												</button>
 											</div>
